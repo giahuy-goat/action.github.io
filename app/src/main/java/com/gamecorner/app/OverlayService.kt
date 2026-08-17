@@ -1,36 +1,28 @@
 package com.gamecorner.app
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.core.app.NotificationCompat
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.view.View
-import android.view.WindowManager
-package com.gamecorner.app
+import android.app.Service
+import android.content.Intent
+import android.os.IBinder
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import androidx.core.app.NotificationCompat
+package com.gamecorner.app
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.Service
+import android.content.Intent
+import android.os.IBinder
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.core.app.NotificationCompat
 
-import android.app.Service
-import android.content.Context
-import android.content.Intent
-import android.graphics.Color
-import android.graphics.PixelFormat
-import android.os.Build
-import android.os.IBinder
-import android.provider.Settings
-import android.view.Gravity
-import android.view.MotionEvent
-import android.widget.Button
-import android.widget.GridLayout
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.view.animation.AccelerateDecelerateInterpolator
-import kotlin.math.roundToInt
 
 class OverlayService : Service() {
     private lateinit var windowManager: WindowManager
