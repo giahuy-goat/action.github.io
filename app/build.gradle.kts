@@ -21,7 +21,7 @@ android {
             isShrinkResources = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
+                "proguard-rules.pro"
             )
         }
         debug {
@@ -35,10 +35,17 @@ android {
         }
     }
 
-    // Keep the original media bytes so the APK size and playback quality
-    // remain predictable. These files are intentionally not compressed.
     androidResources {
         noCompress += listOf("mp4", "wav", "mp3", "png")
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
 
