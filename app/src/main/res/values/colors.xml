@@ -1,0 +1,14 @@
+<resources>
+    <color name="gc_background">#08080A</color>
+    <color name="gc_panel">#111217</color>
+    <color name="gc_panel_deep">#0D0E12</color>
+    <color name="gc_line">#34343D</color>
+    <color name="gc_text">#F1F1F4</color>
+    <color name="gc_muted">#8A8C96</color>
+    <color name="gc_red">#F42B3F</color>
+    <color name="gc_red_bright">#FF4354</color>
+    <color name="gc_orange">#FF8A32</color>
+    <color name="gc_green">#50D49E</color>
+    <color name="gc_blue">#4CA8FF</color>
+    <color name="gc_amber">#FFC057</color>
+</resources>

@@ -1,0 +1,1 @@
+# GAME CORNER keeps release shrinking disabled for predictable raw media packaging.
