@@ -1,3 +1,4 @@
+import android.view.LayoutInflater
 package com.gamecorner.app
 
 import android.app.Notification
