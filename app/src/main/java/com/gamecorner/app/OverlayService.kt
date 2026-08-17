@@ -340,7 +340,7 @@ class OverlayService : Service() {
                 }
                 MotionEvent.ACTION_UP -> {
                     if ((event.rawX - downX).let { kotlin.math.abs(it) } < 12 &&
-                        (event.y - downY).let { kotlin.math.abs(it) } < 12
+                        kotlin.math.abs(event.y - downY) < 12
                     ) {
                         view.performClick()
                     }
