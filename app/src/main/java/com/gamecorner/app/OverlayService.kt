@@ -1,4 +1,9 @@
 package com.gamecorner.app
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.core.app.NotificationCompat
+import android.content.Context
+import android.graphics.Color
 import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -20,6 +25,11 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.core.app.NotificationCompat
 package com.gamecorner.app
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.core.app.NotificationCompat
+import android.content.Context
+import android.graphics.Color
 import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
@@ -327,7 +337,7 @@ class OverlayService : Service() {
             when (event.actionMasked) {
                 MotionEvent.ACTION_DOWN -> {
                     downX = event.rawX
-                    val diffY = kotlin.math.abs(event.rawY - downY)
+                    val diffY = java.lang.Math.abs(event.rawY - downY)
                     val isClick = diffY < 12f
                     startX = params.x
                     startY = params.y
@@ -335,15 +345,15 @@ class OverlayService : Service() {
                 }
                 MotionEvent.ACTION_MOVE -> {
                     params.x = startX + (event.rawX - downX).roundToInt()
-                    val diffY = kotlin.math.abs(event.rawY - downY)
+                    val diffY = java.lang.Math.abs(event.rawY - downY)
                     val isClick = diffY < 12f
                     windowManager.updateViewLayout(view, params)
                     return true
                 }
                 MotionEvent.ACTION_UP -> {
-                    val diffY = kotlin.math.abs(event.rawY - downY)
+                    val diffY = java.lang.Math.abs(event.rawY - downY)
                     val isClick = diffY < 12f
-                        val diffY = kotlin.math.abs(event.rawY - downY)
+                        val diffY = java.lang.Math.abs(event.rawY - downY)
                         val isClick = diffY < 12f
                     ) {
                         view.performClick()
