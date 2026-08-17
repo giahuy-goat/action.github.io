@@ -15,6 +15,10 @@ android {
         versionName = "1.5.2-15200"
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
