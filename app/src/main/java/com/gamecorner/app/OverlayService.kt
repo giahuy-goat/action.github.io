@@ -327,20 +327,24 @@ class OverlayService : Service() {
             when (event.actionMasked) {
                 MotionEvent.ACTION_DOWN -> {
                     downX = event.rawX
-                    downY = event.getY()
+                    val diffY = kotlin.math.abs(event.rawY - downY)
+                    val isClick = diffY < 12f
                     startX = params.x
                     startY = params.y
                     return true
                 }
                 MotionEvent.ACTION_MOVE -> {
                     params.x = startX + (event.rawX - downX).roundToInt()
-                    params.y = startY + (event.getY() - downY).roundToInt()
+                    val diffY = kotlin.math.abs(event.rawY - downY)
+                    val isClick = diffY < 12f
                     windowManager.updateViewLayout(view, params)
                     return true
                 }
                 MotionEvent.ACTION_UP -> {
-                    if ((event.rawX - downX).let { kotlin.math.abs(it) } < 12 &&
-                        kotlin.math.abs(event.getY() - downY) < 12
+                    val diffY = kotlin.math.abs(event.rawY - downY)
+                    val isClick = diffY < 12f
+                        val diffY = kotlin.math.abs(event.rawY - downY)
+                        val isClick = diffY < 12f
                     ) {
                         view.performClick()
                     }
